@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict - Parkinson Detection System</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+    
+
+    <link rel="icon" href="{{url_for('static',filename='img/ibmlogo.png')}}">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="heading-top">
+            <h1 class="heading">Parkinson Detection System</h1>
+            <ul class="menu">
+                <li><a href="{{url_for('home')}} ">Home</a></li>
+            
+                <li><a href="{{url_for('predict')}}">Predict</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- content -->
+
+
+    <section class="predict">
+
+        <div class="left-section">
+
+            <div class="result-image"></div>
+
+            <div class="result">
+
+
+                <!-- result text here   -->
+
+
+                <p id="prediction"> <span>{{prediction}}</span></p>
+
+                <!-- should be hidden first . Revealed after clicking predict -->
+
+            </div>
+
+
+
+        </div>
+
+        <form class="right-section" action="/predict" method="POST" enctype="multipart/form-data">
+            <div class="button-holder">
+                <select name="image-type" class="spinner">
+                    <option value="none" selected disabled hidden>Select an Option</option>
+                    <option value="spiral">Spiral</option>
+                    <option value="wave">Wave</option>
+                </select>
+
+                <input class="file-input" type="file" accept=".png,.jpg,.jpeg" name="uploadedfile" id="choose-file">
+                <button type="submit" value="Submit">Predict</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="info">
+        <p><span>Choose</span> your handrawn spiral sample image and click <span>Predict</span> to check the results.
+        </p>
+    </section>
+
+    <footer>
+        <div class="names">
+            <p> © Jeison Joe</p>
+            <p> Aswani Devan</p>
+            <p> Akshay</p>
+            <p> John</p>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    const chooseFile = document.getElementById("choose-file");
+    const prediction = document.getElementById("prediction");
+    const imgPreview = document.querySelector(".result-image");
+    chooseFile.addEventListener("change", function () {
+        getImgData();
+    });
+    function getImgData() {
+        const files = chooseFile.files[0];
+        if (files) {
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(files);
+            fileReader.addEventListener("load", function () {
+                // imgPreview.style.display = "block";
+                imgPreview.innerHTML = '<img class="result-image" src="' + this.result + '" />';
+                imgPreview.style.width = '15rem';
+                imgPreview.style.border = 'none';
+                imgPreview.style.outline = 'none';
+                prediction.innerHTML = '';
+            });
+        }
+    }
+</script>
+
+</html>

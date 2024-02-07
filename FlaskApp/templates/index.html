@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Parkinson Detection System</title>
+    <link rel="icon" href="{{url_for('static',filename='img/ibmlogo.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/indexstyle.css')}}">
+</head>
+
+<body>
+
+    <!-- <header>
+        <h1 class="heading">Parkinson Detection System</h1>
+        <ul class="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="info.html">Info</a></li>
+        </ul>
+    </header> -->
+
+    <form class="login-page" action="/predict">
+        <div class="login">
+            <h2>
+                Parkinson Detection System
+            </h2>
+            <input class="login-ip" type="text" placeholder="username" name="" id="">
+            <input class="login-ip" type="password" placeholder="password" name="" id="">
+            <button class="login-button" type="submit" action="home.html">Login</button>
+            <p class=>Not an user? <a href="{{url_for('create_user')}}">Join Now</a></p>
+        </div>
+    </form>
+
+</body>
+
+</html>

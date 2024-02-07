@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Parkinson Detection System</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='img/ibmlogo.png')}}">
+</head>
+
+<body>
+
+    <header>
+        <div class="heading-top">
+            <h1 class="heading">Parkinson Detection System</h1>
+            <ul class="menu">
+                <li><a href="{{url_for('home')}} ">Home</a></li>
+                <li><a href="{{url_for('login')}}">Login</a></li>
+                <li><a href="{{url_for('predict')}}">Predict</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <p>
+            Parkinson's disease (PD), or simply Parkinson's, is a long-term degenerative disorder of the central
+            nervous system that mainly affects the motor system. The symptoms usually emerge slowly, and as the disease
+            worsens, non-motor symptoms become more common. The most obvious early symptoms are tremor, rigidity,
+            slowness of movement, and difficulty with walking. Cognitive and behavioral problems may also occur with
+            depression, anxiety, and apathy occurring in many people with PD. Parkinson's disease dementia becomes
+            common in the advanced stages of the disease. Those with Parkinson's can also have problems with their sleep
+            and sensory systems. The motor symptoms of the disease result from the death of cells in the
+            substantia nigra, a region of the midbrain, leading to a dopamine deficit. The cause of this cell death
+            is poorly understood, but involves the build-up of misfolded proteins into Lewy bodies in the
+            neurons. Collectively, the main motor symptoms are also known as parkinsonism or a parkinsonian
+            syndrome.
+
+            The cause of PD is unknown, with both inherited and environmental factors believed to play a role. Those
+            with an affected family member are at an increased risk of getting the disease, with certain genes known to
+            be inheritable risk factors. Other risk factors are those who have been exposed to certain pesticides
+            and who have prior head injuries. Coffee drinkers, tea drinkers, and tobacco smokers are at a reduced
+            risk.
+
+            Diagnosis of typical cases is mainly based on symptoms, with motor symptoms being the chief complaint. Tests
+            such as neuroimaging (magnetic resonance imaging or imaging to look at dopamine neuronal dysfunction known
+            as DaT scan) can be used to help rule out other diseases. Parkinson's disease typically occurs in
+            people over the age of 60, of whom about one percent are affected. Males are more often affected than
+            females at a ratio of around 3:2. When it is seen in people before the age of 50, it is called
+            early-onset PD. By 2015, PD affected 6.2 million people and resulted in about 117,400 deaths
+            globally. The average life expectancy following diagnosis is between 7 and 15 years.
+
+            No cure for PD is known; treatment aims to reduce the effects of the symptoms. Initial treatment is
+            typically with the medications levodopa (L-DOPA), MAO-B inhibitors, or dopamine agonists. As the disease
+            progresses, these medications become less effective, while at the same time producing a side effect marked
+            by involuntary muscle movements. At that time, medications may be used in combination and doses may be
+            increased. Diet and certain forms of rehabilitation have shown some effectiveness at improving
+            symptoms. Surgery to place microelectrodes for deep brain stimulation has been used to reduce motor
+            symptoms in severe cases where drugs are ineffective. Evidence for treatments for the nonmovement-related
+            symptoms of PD, such as sleep disturbances and emotional problems, is less strong.
+        </p>
+    </section>
+
+    <section class="section2">
+        <div class="imgs">
+            <img src="{{url_for('static',filename='img/NORMAL.png')}} " alt="">
+            <img src="{{url_for('static',filename='img/BEFORE.png')}}" alt="">
+            <img src="{{url_for('static',filename='img/AFTER.png')}}" alt="">
+        </div>
+    </section>
+
+    <footer>
+        <div class="names">
+            <p> © Jeison Joe</p>
+            <p> Aswani Devan</p>
+            <p> Akshay</p>
+            <p> John</p>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
